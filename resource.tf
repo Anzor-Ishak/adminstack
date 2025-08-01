@@ -1,17 +1,9 @@
-resource "spacelift_stack" "version-bump-demo" {
-  name = "Version-Bump Demo"
-  space_id = "root"
-
-  repository = "adminstack"
-  branch = "main"
-
-  terraform_version = "1.6.2"
+resource "spacelift_stack" "meta_stack" {
+  name                    = "Version-Bump Demo"
+  slug                    = "version-bump-demo"     # ← must match the UI slug exactly
+  repository              = "adminstack"
+  branch                  = "main"
+  administrative          = true
   terraform_workflow_tool = "OPEN_TOFU"
-  terraform_smart_sanitization = true
-
-  administrative = true
-  enable_well_known_secret_masking = true
-  github_action_deploy = false
+  terraform_version       = "1.6.2"                 # match what’s already live
 }
-
-
