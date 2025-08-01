@@ -5,5 +5,5 @@ resource "spacelift_stack" "meta_stack" {
   branch                  = "main"
   administrative          = true
   terraform_workflow_tool = "OPEN_TOFU"
-  terraform_version       = "1.6.2"                 # match what’s already live
+  terraform_version       = "1.6.2"                 
 }
