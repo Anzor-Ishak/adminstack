@@ -4,6 +4,6 @@ resource "spacelift_stack" "meta_stack" {
   terraform_version       = "1.10.3"   # ← desired new binary
   administrative          = true
 
-  repository              = "Anzor-Ishak/adminstack"
+  repository              = "adminstack"
   branch                  = "main"
 }
